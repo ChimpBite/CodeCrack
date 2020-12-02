@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 void PrintIntroduction(int Difficulty) {
     // Print welcome messages to the terminal
@@ -22,9 +23,9 @@ bool PlayGame(int Difficulty) {
 
     // Declare 3 number code
     // Using Upper camelcase for Unreal Engine
-    const int CodeA = 4;
-    const int CodeB = 8;
-    const int CodeC = 16;
+    const int CodeA = rand() % Difficulty + Difficulty + Difficulty;
+    const int CodeB = rand() % Difficulty + Difficulty + Difficulty;
+    const int CodeC = rand() % Difficulty + Difficulty + Difficulty;
 
     const int CodeSum = CodeA + CodeB + CodeC;
     const int CodeProduct = CodeA * CodeB * CodeC;
@@ -49,21 +50,26 @@ bool PlayGame(int Difficulty) {
 
     // Check if guess is correct
     if (CodeSum == GuessSum && CodeProduct == GuessProduct) {
-        std::cout << "\nYou Win!";
+        std::cout << "\nYou Win! You are now on level: " << ++Difficulty;
         return true;
     } else {
-        std::cout << "\nYou Lose!";
+        std::cout << "\nYou Lose! You will need to retry level: " << Difficulty;
         return false;
     }
 }
 
 int main()
 {
+    srand(time(NULL)); // create new random sequence based on time of day
+
     int LevelDifficulty = 1;
-    while (true) {
+    const int MaxLevel = 5;
+
+    while (LevelDifficulty <= MaxLevel) // loop game until all levels completed
+    {
         bool bLevelComplete = PlayGame(LevelDifficulty);
-        std::cin.clear();
-        std::cin.ignore();
+        std::cin.clear(); // clears any errors
+        std::cin.ignore(); // discards the buffer
 
         if (bLevelComplete)
         {
@@ -71,6 +77,6 @@ int main()
         }
         
     }
-    
+    std::cout << "\n **** Congratulations!! You beat the game!! ****\n";
     return 0;
 }
