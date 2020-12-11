@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* Fonts */
 /* font-family: 'Roboto', sans-serif; */
@@ -6,44 +6,8 @@
 /*border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.*/
 * {
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
     margin: 0;
 }
 
-p {
-    font-weight: bold;
-}
 
-.code, .crack, .header, .footer, .winlose {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    padding: 10px;
-}
 
-span {
-    font-weight:bold;
-}
-
-.formcontrol {
-    border-radius: 5px;
-    border: 1px solid black;
-    outline: none;
-}
-
-.button {
-    margin-top: 10px;
-}
