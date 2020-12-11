@@ -11,6 +11,7 @@ export const Footer = () => {
       alignItems='center'
       justifyContent='center'
       marginTop={2}
+      marginBottom={2}
       paddingTop={1}
       paddingBottom={2}
     >
