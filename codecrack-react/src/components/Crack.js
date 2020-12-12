@@ -16,6 +16,11 @@ export const Crack = () => {
 
   const classes = useStyles();
 
+  let GuessA, GuessB, GuessC;
+
+  let GuessSum, GuessProduct;
+  console.log('Logged Output -> Crack -> GuessSum', GuessSum);
+  console.log('Logged Output -> Crack -> GuessProduct', GuessProduct);
   return (
     <Box
       boxShadow={5}
@@ -36,7 +41,7 @@ export const Crack = () => {
           justifyContent='center'
         >
           <TextField
-            id='standard-number'
+            id='numberOne'
             label='Enter the first number:'
             type='number'
             size='small'
@@ -44,7 +49,7 @@ export const Crack = () => {
             InputLabelProps={{ shrink: true }}
           />
           <TextField
-            id='standard-number'
+            id='numberTwo'
             label='Enter the second number:'
             type='number'
             size='small'
@@ -52,14 +57,30 @@ export const Crack = () => {
             InputLabelProps={{ shrink: true }}
           />
           <TextField
-            id='standard-number'
+            id='numberThree'
             label='Enter the third number:'
             type='number'
             size='small'
             variant='outlined'
             InputLabelProps={{ shrink: true }}
           />
-          <Button variant='outlined'>Enter</Button>
+          <Button
+            variant='outlined'
+            onClick={() => {
+              const numberOne = document.getElementById('numberOne');
+              const numberTwo = document.getElementById('numberTwo');
+              const numberThree = document.getElementById('numberThree');
+
+              GuessA = parseInt(numberOne.value);
+              GuessB = parseInt(numberTwo.value);
+              GuessC = parseInt(numberThree.value);
+
+              GuessSum = GuessA + GuessB + GuessC;
+              GuessProduct = GuessA * GuessB * GuessC;
+            }}
+          >
+            Enter
+          </Button>
         </Box>
       </form>
     </Box>

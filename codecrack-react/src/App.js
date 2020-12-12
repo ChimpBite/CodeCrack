@@ -5,18 +5,21 @@ import Code from './components/Code';
 import Crack from './components/Crack';
 import Winlose from './components/Winlose';
 import Footer from './components/Footer';
+import { RandomNumberProvider } from '../context/RandomNumberState';
 
 import './App.css';
 
 function App() {
   return (
-    <Container maxWidth='sm'>
-      <Header />
-      <Code />
-      <Crack />
-      <Winlose />
-      <Footer />
-    </Container>
+    <RandomNumberProvider>
+      <Container maxWidth='sm'>
+        <Header />
+        <Code />
+        <Crack />
+        <Winlose />
+        <Footer />
+      </Container>
+    </RandomNumberProvider>
   );
 }
 

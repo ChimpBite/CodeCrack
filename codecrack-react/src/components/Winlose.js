@@ -1,12 +1,11 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
+import codeSum from './Code';
+import guessSum from './Code';
+import guessProduct from './Crack';
+import codeProduct from './Crack';
 
 export const Winlose = () => {
-  let codeSum = 4;
-  let guessSum = 4;
-  let codeProduct = 4;
-  let guessProduct = 4;
-
   if (codeSum === guessSum && codeProduct === guessProduct) {
     return (
       <Box

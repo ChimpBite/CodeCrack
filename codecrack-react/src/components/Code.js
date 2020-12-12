@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Box from '@material-ui/core/Box';
+import { RandomNumberContext } from '../context/RandomNumberState';
 
 export const Code = () => {
+  const {};
   return (
     <Box
       boxShadow={5}
@@ -13,10 +15,11 @@ export const Code = () => {
       marginTop={2}
       paddingTop={1}
       paddingBottom={2}
+      fontSize='1rem'
     >
       <p>There are 3 numbers in the code</p>
-      <p>The codes add-up to: 55</p>
-      <p>The codes multiply to: 555</p>
+      <p>The codes add-up to: {CodeSum}</p>
+      <p>The codes multiply to: {CodeProduct}</p>
     </Box>
   );
 };
