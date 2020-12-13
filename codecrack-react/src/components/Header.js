@@ -7,7 +7,9 @@ import {
 } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
-export const Header = () => {
+export const Header = (props) => {
+  let { Difficulty } = props;
+
   let theme = createMuiTheme();
   theme = responsiveFontSizes(theme);
 
@@ -38,7 +40,7 @@ export const Header = () => {
         <Typography variant='h4'>
           Enter the correct code to continue...
         </Typography>
-        <Typography variant='h4'>Level Difficulty: 1</Typography>
+        <Typography variant='h4'>Level Difficulty: 2</Typography>
       </ThemeProvider>
     </Box>
   );

@@ -1,12 +1,8 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
-import codeSum from './Code';
-import guessSum from './Code';
-import guessProduct from './Crack';
-import codeProduct from './Crack';
 
-export const Winlose = () => {
-  if (codeSum === guessSum && codeProduct === guessProduct) {
+export const Winlose = (props) => {
+  if ('') {
     return (
       <Box
         boxShadow={5}
@@ -35,7 +31,7 @@ export const Winlose = () => {
         paddingTop={1}
         paddingBottom={2}
       >
-        <h4>You Lose! You will need to retry level: 1</h4>
+        <h4>You Lose! You will need to retry level: 2</h4>
       </Box>
     );
   }

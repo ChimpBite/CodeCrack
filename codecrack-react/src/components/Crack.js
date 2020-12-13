@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
 
-export const Crack = () => {
+export const Crack = (props) => {
   const useStyles = makeStyles((theme) => ({
     root: {
       '& .MuiTextField-root': {
@@ -16,11 +16,6 @@ export const Crack = () => {
 
   const classes = useStyles();
 
-  let GuessA, GuessB, GuessC;
-
-  let GuessSum, GuessProduct;
-  console.log('Logged Output -> Crack -> GuessSum', GuessSum);
-  console.log('Logged Output -> Crack -> GuessProduct', GuessProduct);
   return (
     <Box
       boxShadow={5}
@@ -67,16 +62,7 @@ export const Crack = () => {
           <Button
             variant='outlined'
             onClick={() => {
-              const numberOne = document.getElementById('numberOne');
-              const numberTwo = document.getElementById('numberTwo');
-              const numberThree = document.getElementById('numberThree');
-
-              GuessA = parseInt(numberOne.value);
-              GuessB = parseInt(numberTwo.value);
-              GuessC = parseInt(numberThree.value);
-
-              GuessSum = GuessA + GuessB + GuessC;
-              GuessProduct = GuessA * GuessB * GuessC;
+              // debugger;
             }}
           >
             Enter
