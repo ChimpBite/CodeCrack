@@ -1,0 +1,28 @@
+.randomengine-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.paragraph {
+  margin-bottom: -0.75rem;
+}
+
+.code-box {
+  border: 1px solid white;
+  font-size: 2rem;
+  padding: 2rem 3rem;
+  width: 80%;
+  text-align: center;
+}
+
+.span-box {
+  width: 80%;
+  margin-top: 1rem;
+  text-align: left;
+
+  &.spanOne {
+    margin-top: 1.5rem;
+  }
+}

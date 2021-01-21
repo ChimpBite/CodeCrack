@@ -13,7 +13,6 @@ const Level = props => {
 };
 
 const mapStateToProps = state => {
-  console.log('State', state);
   return state;
 };
 
