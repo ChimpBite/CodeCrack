@@ -4,15 +4,17 @@ export const setLevel = () => ({
   type: GameEngineActionTypes.SET_NEW_LEVEL,
 });
 
-export const setEngine = () => ({
-  type: GameEngineActionTypes.SET_RANDOM_ENGINE,
+export const setGeneratedCode = () => ({
+  type: GameEngineActionTypes.SET_GENERATED_CODE,
+  codeA: randomRoll(),
+  codeB: randomRoll(),
+  codeC: randomRoll(),
 });
 
-export const setHackCode = () => ({
-  type: GameEngineActionTypes.SET_CODE_SUM_PRODUCT,
+export const setCodeBase = () => ({
+  type: GameEngineActionTypes.SET_CODEBASE,
 });
 
-export const setPlayerGuess = guess => ({
-  type: GameEngineActionTypes.SET_PLAYER_GUESS,
-  payload: guess,
-});
+const randomRoll = () => {
+  return Math.floor(Math.random() * 5) + 1;
+};

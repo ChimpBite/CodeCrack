@@ -18,34 +18,18 @@ const gameEngine = (state = initialState, action) => {
   switch (action.type) {
     case GameEngineActionTypes.SET_NEW_LEVEL:
       return { ...state, LvL: state.LvL++ };
-    case GameEngineActionTypes.SET_RANDOM_ENGINE:
+    case GameEngineActionTypes.SET_GENERATED_CODE:
       return {
         ...state,
-        CodeA:
-          Math.floor(Math.random() * 5) + 1 + state.LvL + state.lvl + state.lvl,
-        CodeB:
-          Math.floor(Math.random() * 5) + 1 + state.LvL + state.lvl + state.lvl,
-        CodeC:
-          Math.floor(Math.random() * 5) + 1 + state.LvL + state.lvl + state.lvl,
+        CodeA: action.codeA + state.LvL,
+        CodeB: action.codeB + state.LvL,
+        CodeC: action.codeC + state.LvL,
       };
-    case GameEngineActionTypes.SET_CODE_SUM_PRODUCT:
+    case GameEngineActionTypes.SET_CODEBASE:
       return {
         ...state,
         CodeSum: state.CodeA + state.CodeB + state.CodeC,
         CodeProduct: state.CodeA * state.CodeB * state.CodeC,
-      };
-    case GameEngineActionTypes.SET_PLAYER_GUESS:
-      return {
-        ...state,
-        GuessA: action.payload,
-        GuessB: action.payload,
-        GuessC: action.payload,
-      };
-    case GameEngineActionTypes.SET_GUESS_SUM_PRODUCT:
-      return {
-        ...state,
-        GuessSum: state.GuessA + state.GuessB + state.GuessC,
-        GuessProduct: state.GuessA * state.GuessB * state.GuessC,
       };
     default:
       return state;
