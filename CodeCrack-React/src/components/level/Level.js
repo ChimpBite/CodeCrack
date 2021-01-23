@@ -4,17 +4,12 @@ import { connect } from 'react-redux';
 import {
   setGeneratedCode,
   setCodeBase,
-} from '../../redux/gameengine/GameEngine.actions';
+} from '../../redux/gameengine/GameEngine.actions'; //importing in random number actions
 
 import './Level.scss';
 
 class Level extends React.Component {
-  constructor(props) {
-    super(props);
-
-    console.log('props', props);
-  }
-
+  // setting random codes on mounting(game start)
   componentDidMount() {
     this.props.setGeneratedCode();
     this.props.setCodeBase();
@@ -24,14 +19,13 @@ class Level extends React.Component {
     return (
       <div className='level-container'>
         <div className='instructions'>Level</div>
-        <div className='level'>{this.props.GameEngine.LvL}</div>
+        <div className='level'>{this.props.LvL}</div>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => {
-  console.log('State', state.GameEngine);
   return state;
 };
 

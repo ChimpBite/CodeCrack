@@ -11,17 +11,16 @@ const RandomEngine = props => {
       <div className='span-box-randomengine spanOne'>
         <span>The codes sum is:</span>
       </div>
-      <div className='code-box'>{props.GameEngine.CodeSum}</div>
+      <div className='code-box'>{props.CodeSum}</div>
       <div className='span-box-randomengine spanTwo'>
         <span>The codes product is:</span>
       </div>
-      <div className='code-box'>{props.GameEngine.CodeProduct}</div>
+      <div className='code-box'>{props.CodeProduct}</div>
     </div>
   );
 };
 
 const mapStateToProps = state => {
-  console.log('Random', state.GameEngine);
   return state;
 };
 
