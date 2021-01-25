@@ -11,7 +11,7 @@ import GameEngine from './gameengine/GameEngine';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['LvL', 'GuessSum', 'GuessProduct'],
+  whitelist: ['LvL'],
 };
 
 const persistedReducer = persistReducer(persistConfig, GameEngine);

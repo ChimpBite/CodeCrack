@@ -1,22 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Box from '@material-ui/core/Box';
 
 import './RandomEngine.scss';
 
 const RandomEngine = props => {
   return (
-    <div className='randomengine-container'>
-      <p className='paragraph'>Enter the correct code to advance level</p>
-      <p className='paragraph'>There are 3 numbers in the code</p>
-      <div className='span-box-randomengine spanOne'>
-        <span>The codes sum is:</span>
-      </div>
-      <div className='code-box'>{props.CodeSum}</div>
-      <div className='span-box-randomengine spanTwo'>
-        <span>The codes product is:</span>
-      </div>
-      <div className='code-box'>{props.CodeProduct}</div>
-    </div>
+    <>
+      <Box className='p-code'>Enter the correct code to advance level</Box>
+      <Box className='p-code'>There are 3 numbers in the code</Box>
+      <Box className='p-code'>The codes sum is:</Box>
+      <Box className='code-sum'>{props.CodeSum}</Box>
+      <Box className='p-code'>The codes product is:</Box>
+      <Box className='code-product'>{props.CodeProduct}</Box>
+    </>
   );
 };
 

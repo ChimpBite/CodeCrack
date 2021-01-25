@@ -1,30 +1,20 @@
-.level-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.instructions {
-  font-size: 2.5rem;
+.level-header {
+  font-size: 3rem;
+  text-align: center;
 }
 
 .level {
-  font-size: 4rem;
   border: 1px solid white;
-  padding: 1rem 3rem;
-  margin-top: 0.5rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 2.5rem;
+  width: 30%;
+  margin: 0 auto;
 }
 
 @media (max-width: 550px) {
-  .instructions {
-    font-size: 3rem;
-  }
-
   .level {
-    font-size: 4rem;
-    border: 1px solid white;
-    padding: 1rem 3rem;
-    margin-top: 1rem;
+    width: 100%;
+    margin: 0 auto;
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Box from '@material-ui/core/Box';
 
 import {
   setGeneratedCode,
@@ -17,10 +18,10 @@ class Level extends React.Component {
 
   render() {
     return (
-      <div className='level-container'>
-        <div className='instructions'>Level</div>
-        <div className='level'>{this.props.LvL}</div>
-      </div>
+      <>
+        <Box className='level-header'>Level</Box>
+        <Box className='level'>{this.props.LvL}</Box>
+      </>
     );
   }
 }

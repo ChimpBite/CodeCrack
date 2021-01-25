@@ -1,12 +1,11 @@
 import React from 'react';
+import Box from '@material-ui/core/Box';
 
 import './Footer.scss';
 
 const Footer = () => {
   return (
-    <div className='footer'>
-      <p>Chad Parker &copy;{new Date().getFullYear()}</p>
-    </div>
+    <Box className='footer'>Chad Parker &copy;{new Date().getFullYear()}</Box>
   );
 };
 

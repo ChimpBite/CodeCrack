@@ -1,14 +1,13 @@
 import React from 'react';
+import Box from '@material-ui/core/Box';
 
 import './Header.scss';
 
 const Header = () => {
   return (
-    <div className='header'>
-      <div className='title'>
-        <h1>CodeCrack</h1>
-      </div>
-    </div>
+    <Box className='header'>
+      <h1>CodeCrack</h1>
+    </Box>
   );
 };
 

@@ -1,20 +1,22 @@
 import Header from './components/header/Header';
 import Level from './components/level/Level';
 import RandomEngine from './components/randomengine/RandomEngine';
-import PlayerGuess from './components/playerguess/PlayerGuess';
+import PlayerInput from './components/playerinput/PlayerInput';
 import Footer from './components/footer/Footer';
 
-import './App.css';
+import Container from '@material-ui/core/Container';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className='App'>
+    <Container fixed className='container'>
       <Header />
       <Level />
       <RandomEngine />
-      <PlayerGuess />
+      <PlayerInput />
       <Footer />
-    </div>
+    </Container>
   );
 }
 

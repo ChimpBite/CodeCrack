@@ -1,5 +1,10 @@
 .footer {
-  width: 80%;
-  margin-bottom: 2rem;
-  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+@media (max-width: 550px) {
+  .footer {
+    width: 100%;
+  }
 }
